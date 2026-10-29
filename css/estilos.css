@@ -1,0 +1,204 @@
+/* =========================================================
+   Práctica «Mi Festival Ideal» · Aplicaciones Web · 2º SMR
+   Alumno/a: ____________________
+
+   ESCALA DE LA PARRILLA
+     1 hora = 80px  (media hora = 40px)  ·  1 escenario = 200px
+     top    = (hora de inicio − 20:00) × 80px
+     left   = (número de escenario − 1) × 200px
+     height = duración en horas × 80px
+
+   Todo lo «decorativo» ya está hecho. Tú escribes las líneas
+   marcadas con TAREA: son las de float y position.
+   ========================================================= */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #14111F;     /* cambia los colores si quieres */
+  color: #EEE;
+}
+
+/* ---------- 1. Barra de navegación ---------- */
+nav {
+  /* TAREA 1: que la barra acompañe al scroll y quede por encima de todo
+     (position, top y z-index) */
+  z-index: 2;
+  top: 0px;
+  position:sticky;
+  height: 70px;
+  background-color: #7B1FA2;
+}
+nav .logo {
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 70px;
+  padding: 0 30px;
+  text-decoration: none;
+}
+nav ul {
+  /* TAREA 2: la lista, a la derecha de la barra (float) */
+  float: right;
+  margin: 0 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  /* TAREA 3: los elementos, en fila (display) y como referencia
+     para la burbuja (position) */
+  position: relative;
+  display: inline-block;
+  line-height: 70px;
+  margin: 0 5px;
+}
+nav li a {
+  color: white;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* TAREA 4: el enlace activo y el hover, con otro color de fondo */
+a.active {background-color:chocolate;}
+a:hover{background-color: grey;}
+
+.burbuja {
+  /* TAREA 5: en la esquina superior derecha del li (position, top, right) */
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  background-color: #FFD600;
+  color: #222;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ---------- 2. Horario (la estructura ya está hecha) ---------- */
+main {
+  display: flow-root;
+  padding: 20px;
+}
+.horario {
+  float: left;
+  width: 660px;              /* 60px de horas + 3 escenarios × 200px */
+}
+.escenarios {
+  margin-left: 60px;
+  display: flow-root;
+}
+.escenario {
+  float: left;
+  width: 200px;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: bold;
+  background-color: #311B92;
+  border: 1px solid #14111F;
+}
+.horas {
+  float: left;
+  width: 60px;
+}
+.horas div {
+  height: 80px;              /* 1 hora */
+  font-size: 13px;
+  color: #AAA;
+}
+.parrilla {
+  float: left;
+  width: 600px;
+  position: relative;
+  /* TAREA 6: la parrilla es la referencia de los conciertos (position) */
+
+}
+.franja {
+  height: 80px;              /* 1 hora */
+  border-top: 1px dashed #444;
+}
+.franja:nth-child(even) { background-color: #1D1930; }
+
+.concierto {
+  /* TAREA 7: los conciertos se colocan respecto a la parrilla (position) */
+  position: absolute;
+  width: 200px;
+  padding: 8px;
+  border: 3px solid #14111F;
+  border-radius: 8px;
+  background-color: #00897B;
+  font-size: 14px;
+}
+/* Cada concierto en su sitio, según la ESCALA de arriba */
+#c1 { top: 0px; left: 0px; height: 80px; }   /* ← ejemplo resuelto: Escenario 1 · 20:00 · 1 h */
+#c2 { top: 240px; left: 400px; height: 120px; } 
+#c3 { top: 40px; left: 220px; height: 160px; z-index: 2; background-color: #E040FB;} 
+#c4 { top: 380px; left: 200px; height: 100px; } 
+#c5 { top: 360px; left: 400px; height: 160px; }
+#c6 { top: 80px; left: 0px; height: 160px; }  
+#c7 { top: 160px; left: 200px; height: 120px;}  
+/* TAREA 8: #c2 … #c6. Escribe al lado de cada uno el escenario,
+   la hora y la duración, como en el ejemplo */
+
+
+/* TAREA 9: el drama del retraso. El concierto anterior a tu cabeza de
+   cartel, EN EL MISMO ESCENARIO, se retrasa 30 minutos: calcula su height
+   con el retraso incluido y verás que su caja pisa la del cabeza de cartel.
+   Añade class="concierto cabeza" al div del cabeza de cartel y aquí:
+   - desplázalo 20px a la derecha (margin-left: 20px; width: 180px), como
+     en el calendario del móvil, para que asome por detrás el retraso;
+   - cámbiale el color;
+   - súbelo con z-index, para que quede encima sea cual sea el orden
+     de los div en el HTML */
+
+
+/* ---------- 3. Mi ruta ---------- */
+.ruta {
+  /* TAREA 10: a la derecha, ocupando el 35 % (float, width) y pegada
+     debajo de la barra al hacer scroll (position, top) */
+  float: right;
+  width: 35%;
+  position: sticky;
+  top: 15px;
+  padding: 15px;
+  background-color: #241E3A;
+  border: 1px solid #5E35B1;
+}
+.ruta h2 { margin-top: 0; }
+.ruta li { margin-bottom: 10px;}
+/* TAREA 11: al pasar el ratón por un elemento de la ruta, que se
+   desplace unos píxeles a la derecha (position: relative) */
+
+.ruta li:hover {
+  position: relative;
+  left: 5px; 
+}
+
+/* ---------- 4. Reproductor fijo ---------- */
+.reproductor {
+  /* TAREA 12: pegado abajo de la ventana, de lado a lado y por encima
+     de todo (position, bottom, left, width, z-index) */
+ position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  margin: 0;
+  padding: 12px;
+  background-color: #000;
+  border-top: 2px solid #E040FB;
+  text-align: center;
+}
+
+footer {
+  clear: both;
+  padding: 15px 15px 70px 15px;  /* hueco para que el reproductor no tape el pie */
+  text-align: center;
+  color: #888;
+}

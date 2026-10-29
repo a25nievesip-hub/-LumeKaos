@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>LumeKaos · Nieves</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body id="inicio">
+  <!-- Cambia los textos marcados con ✏️ por los tuyos.
+       NO cambies las clases ni los id: el CSS los usa. -->
+
+  <!-- ========== 1. BARRA DE NAVEGACIÓN ========== -->
+  <nav>
+    <span class="logo" href="#inicio">💀🔥 LumeKaos</span>
+    <ul>
+      <li><a href="#inicio">Cartel</a></li>
+      <!-- ✏️ La burbuja: cuántos conciertos tienes en tu ruta -->
+      <li><a class="active" href="#horarios">Horarios</a><span class="burbuja">7</span></li>
+      <li><a href="#ruta">A miña ruta</a></li>
+    </ul>
+  </nav>
+
+  <main id="horarios">
+    <!-- ========== 2. HORARIO ========== -->
+    <div class="horario">
+      <div class="escenarios">
+        <div class="escenario">Escenario Kaos</div>
+        <div class="escenario">Escenario Lume</div>
+        <div class="escenario">Escenario Rebelióm</div>
+      </div>
+
+      <div class="horas">
+        <div>20:00</div><div>21:00</div><div>22:00</div><div>23:00</div>
+        <div>00:00</div><div>01:00</div><div>02:00</div><div>03:00</div>
+      </div>
+
+      <div class="parrilla">
+        <div class="franja"></div><div class="franja"></div><div class="franja"></div><div class="franja"></div>
+        <div class="franja"></div><div class="franja"></div><div class="franja"></div><div class="franja"></div>
+
+        <!-- Un div por concierto. Cambia el artista y la hora.
+             Si añades más, sigue con c7, c8… -->
+        <div class="concierto" id="c1"><strong>😈🤘 Manolo Kabezabolo</strong><br>20:00 – 21:00</div>
+        <div class="concierto" id="c2"><strong>🤘🔥 The Eskarallas</strong><br>00:00 – 01:30</div>
+        <div class="concierto" id="c3"><strong>🔥🔥 KOP</strong><br>20:30 – 22:00</div>
+        <div class="concierto" id="c4"><strong>💀🔥 Lendakaris Muertos</strong><br>01:45 – 02:50</div>
+        <div class="concierto" id="c5"><strong>😈🔥 Rebeliom do Inframundo</strong><br>01:30 – 03:30</div>
+        <div class="concierto" id="c6"><strong>🔥🔥 IRA</strong><br>21:00 – 23:00</div>
+        <div class="concierto" id="c7"><strong><pre>
+          
+🔥🔥 Roba Estesa</pre></strong><br>22:00 – 23:30</div>
+      </div>
+    </div>
+
+    <!-- ========== 3. MI RUTA ========== -->
+    <aside class="ruta" id="ruta">
+      <h2>Mi ruta del festival</h2>
+      <ol>
+        <li><strong>20:00 · Manolo Kabezabolo</strong> Non te podes perder "Resina, agua y ajo".</li>
+        <li><strong>20:30 · KOP</strong> Non te podes perder "Desalojos son disturbios". </li>
+        <li><strong>21:00 · IRA</strong> Non te podes perder "Soy".</li>
+        <li><strong>22:00 · Roba Estesa</strong> Non te podes perder "Oceà".</li>
+        <li><strong>00:00 · The Eskarallas</strong> Non te podes perder "Atrapados en la red".</li>
+        <li><strong>01:30 · Rebeliom do Inframundo</strong> Non te podes perder "Non imos polo regho".</li>
+        <li><strong>23:30 · Cea</strong> Aturuxo en Bueu</li>
+      </ol>
+    </aside>
+  </main>
+
+  <!-- ========== 4. REPRODUCTOR FIJO ========== -->
+  <p class="reproductor">🎵 Sonando agora no Escenario Kaos: «Soy de IRA» — 🎟️ Abonos agotados</p>
+
+  <footer>
+    <p>LumeKaos · Nieves Iglesias Pereira · 2º SMR</p>
+  </footer>
+</body>
+</html>
